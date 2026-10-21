@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Veilnote</string>
+    <string name="brand_name">霧箋</string>
+    <string name="brand_tagline">讓每個想法，都有自己的光</string>
+    <string name="storage_choice_title">選擇你的資料儲存方式</string>
+    <string name="storage_choice_body">為了保證卸載重裝後筆記不丟失，Veilnote 可以在手機公共目錄建立一個專屬資料夾。你也可以跳過，使用應用內部儲存。</string>
+    <string name="storage_choice_agree">同意，建立專屬資料夾</string>
+    <string name="storage_choice_skip">暫不，使用本機空間</string>
+    <string name="storage_skip_warning_title">請注意</string>
+    <string name="storage_skip_warning_body">如果你選擇跳過，筆記將儲存在 App 私有空間。一旦卸載 Veilnote，筆記將永久遺失且無法復原。確定要跳過嗎？</string>
+    <string name="settings_mode_title">應用模式</string>
+    <string name="settings_mode_hint">極簡模式關閉轉場與網址辨識，只保留記筆記。</string>
+    <string name="settings_mode_minimal">極簡模式</string>
+    <string name="settings_mode_full">全量模式</string>
+    <string name="settings_mode_minimal_hint">極簡模式已隱藏轉場選項，頁面直接切換。</string>
+    <string name="settings_url_switch">網址辨識</string>
+    <string name="storage_skip_confirm">仍要跳過</string>
+    <string name="storage_skip_create">去建立</string>
+    <string name="storage_guide_title">建立 Veilnote 資料夾</string>
+    <string name="storage_guide_body">請在接下來的系統介面中，點擊底部的【新增資料夾】，命名為 Veilnote，然後點擊下方的【使用此資料夾】。</string>
+    <string name="storage_guide_step_create">1. 新增資料夾</string>
+    <string name="storage_guide_step_name">2. 命名為 Veilnote</string>
+    <string name="storage_guide_step_use">3. 點擊「使用此資料夾」</string>
+    <string name="storage_guide_confirm">我知道了</string>
+    <string name="storage_saf_setup_failed">資料夾建立失敗，請重試</string>
+    <string name="storage_fallback_toast">外部資料夾讀寫失敗，已自動降級為應用內部儲存</string>
+    <string name="settings_data_title">資料</string>
+    <string name="storage_status_private">目前：應用內部儲存</string>
+    <string name="storage_status_private_warning">解除安裝後，筆記會永久遺失且無法復原。</string>
+    <string name="storage_status_enable">去開啟專屬資料夾</string>
+    <string name="storage_status_saf">目前：專屬資料夾</string>
+    <string name="storage_status_folder">資料夾：%1$s</string>
+    <string name="storage_status_safe">已取得長期讀寫權限，解除安裝重裝後可復原。</string>
+
+    <!-- Home -->
+    <string name="home_title">我的筆記</string>
+    <plurals name="home_note_count">
+        <item quantity="other">共 %1$d 則筆記</item>
+    </plurals>
+    <string name="home_note_count_empty">從第一個想法開始</string>
+    <string name="action_new_note">新增</string>
+    <string name="action_settings">設定</string>
+    <string name="search_hint">搜尋標題或內文…</string>
+    <string name="search_empty_title">找不到筆記</string>
+    <string name="search_empty_body">換個關鍵字，或清除標籤篩選再試試。</string>
+    <string name="search_clear_filters">清除篩選</string>
+    <string name="empty_title">這裡還很安靜</string>
+    <string name="empty_body">寫下第一篇筆記，把此刻留在光裡。</string>
+    <string name="empty_action">寫下第一篇</string>
+    <string name="loading_notes">正在整理筆記…</string>
+    <string name="tag_all">全部</string>
+    <string name="tag_manage">標籤管理</string>
+    <string name="note_untitled">無標題</string>
+    <string name="note_empty_content_hint">點擊繼續編輯</string>
+    <string name="note_pin">置頂</string>
+    <string name="note_unpin">取消置頂</string>
+    <string name="note_pin_bottom">置底</string>
+    <string name="note_unpin_bottom">取消置底</string>
+    <plurals name="selection_count">
+        <item quantity="other">已選 %1$d 項</item>
+    </plurals>
+    <string name="action_delete_selected">刪除所選</string>
+    <string name="cd_exit_selection">退出多選</string>
+    <string name="cd_scroll_to_top">回到頂部</string>
+    <string name="cd_scroll_to_bottom">回到底部</string>
+    <string name="note_deleted_snackbar">已刪除「%1$s」</string>
+
+    <!-- Time -->
+    <string name="time_just_now">剛剛</string>
+    <string name="time_yesterday_at">昨天 %1$s</string>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d 分鐘前</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d 小時前</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d 天前</item>
+    </plurals>
+
+    <!-- Tags -->
+    <string name="tag_sheet_title">標籤</string>
+    <string name="tag_sheet_subtitle">給筆記一個輕巧的歸屬。</string>
+    <string name="tag_add_hint">新標籤名稱</string>
+    <string name="tag_add_action">新增標籤</string>
+    <string name="tag_empty_hint">還沒有標籤，建立第一個吧。</string>
+    <string name="tag_delete_title">刪除標籤？</string>
+    <string name="tag_delete_message">刪除「%1$s」後，所有筆記上的這個標籤也會移除，筆記本身不會被刪除。</string>
+    <string name="tag_duplicate_error">已經有同名標籤了</string>
+    <string name="tag_blank_error">標籤名稱不能為空</string>
+    <string name="tag_generic_error">標籤操作失敗，請重試</string>
+    <string name="tag_picker_title">選擇標籤</string>
+    <string name="tag_picker_subtitle">可以多選，也可以順手建立新標籤。</string>
+    <string name="tag_existing">已有標籤</string>
+    <string name="tag_none">暫無標籤</string>
+    <!-- Editor -->
+    <string name="editor_title">編輯筆記</string>
+    <string name="editor_action_done">完成</string>
+    <string name="editor_placeholder_title">標題</string>
+    <string name="editor_save_pending">待儲存</string>
+    <string name="editor_save_saving">儲存中…</string>
+    <string name="editor_save_saved">已儲存</string>
+    <plurals name="word_count">
+        <item quantity="other">%1$d 字</item>
+    </plurals>
+    <string name="editor_save_failed">儲存失敗</string>
+    <string name="editor_load_error">這篇筆記不見了</string>
+    <string name="editor_ambience_label">氛圍色</string>
+    <string name="editor_ambience_hint">給這篇筆記一層很輕的情緒。</string>
+    <!-- Settings -->
+    <string name="settings_title">設定</string>
+    <string name="settings_subtitle">讓介面更像你。</string>
+    <string name="settings_background_title">背景</string>
+    <string name="settings_gradient_title">漸層</string>
+    <string name="settings_image_title">圖片</string>
+    <string name="settings_image_pick">選擇圖片</string>
+    <string name="settings_image_change">更換圖片</string>
+    <string name="settings_image_remove">移除圖片</string>
+    <string name="settings_image_active">圖片背景已啟用</string>
+    <string name="settings_image_use">使用此圖片背景</string>
+    <string name="settings_image_none">未選擇圖片</string>
+    <string name="settings_image_hint">圖片會複製到應用程式私有目錄，僅保存在本機。</string>
+    <string name="settings_image_importing">正在處理圖片…</string>
+    <string name="settings_image_failed">圖片匯入失敗，請換一張再試</string>
+    <string name="settings_blur_title">模糊強度</string>
+    <string name="settings_blur_value">%1$d dp</string>
+    <string name="settings_blur_hint">只模糊背景層，玻璃卡片始終保持清晰。</string>
+    <string name="settings_appearance_title">外觀</string>
+    <string name="settings_dark_title">深色模式</string>
+    <string name="settings_transition_title">轉場動畫</string>
+    <string name="settings_transition_style_title">轉場風格</string>
+    <string name="settings_transition_hint">選擇頁面進入方式，切換後立即生效。</string>
+    <string name="settings_transition_bottom_up">底部滑入</string>
+    <string name="settings_transition_scale">按鈕放大</string>
+    <string name="url_open_failed">沒有可用的瀏覽器</string>
+    <string name="settings_dark_system">跟隨系統</string>
+    <string name="settings_dark_light">淺色</string>
+    <string name="settings_dark_dark">深色</string>
+    <string name="settings_language_title">語言</string>
+    <string name="settings_language_hint">切換後介面會立即重新整理。</string>
+    <string name="settings_language_system">跟隨系統</string>
+    <string name="settings_reset">恢復預設設定</string>
+    <string name="settings_reset_title">恢復預設設定？</string>
+    <string name="settings_reset_message">背景、模糊強度和深色模式會恢復初始值，所有筆記不受影響。</string>
+    <string name="settings_local_title">只屬於這台裝置</string>
+    <string name="settings_local_body">筆記與設定均保存在本機，不會登入，也不會同步到雲端。</string>
+
+    <!-- Dialogs / common -->
+    <string name="action_close">關閉</string>
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_delete">刪除</string>
+    <string name="action_rename">重新命名</string>
+    <string name="action_undo">復原</string>
+    <string name="action_confirm">確定</string>
+    <string name="action_done">完成</string>
+    <string name="cd_more">更多操作</string>
+    <string name="cd_clear_search">清除搜尋</string>
+    <string name="cd_edit_tag">重新命名標籤</string>
+    <string name="cd_delete_tag">刪除標籤</string>
+    <string name="cd_back">返回</string>
+    <string name="cd_background_image">背景圖片預覽</string>
+    <string name="operation_failed">操作失敗，請稍後再試</string>
+
+    <!-- Ambience colours -->
+    <string name="ambience_mist">晨霧</string>
+    <string name="ambience_sage">鼠尾草</string>
+    <string name="ambience_ocean">海藍</string>
+    <string name="ambience_amber">琥珀</string>
+    <string name="ambience_rose">玫瑰</string>
+    <string name="ambience_violet">紫羅蘭</string>
+
+    <!-- Background gradients -->
+    <string name="gradient_aurora">極光</string>
+    <string name="gradient_sunset">日落</string>
+    <string name="gradient_midnight">午夜</string>
+    <string name="gradient_sage">苔原</string>
+    <string name="gradient_blush">腮紅</string>
+    <string name="gradient_ocean">深海</string>
+    <!-- Note encryption -->
+    <string name="note_encrypted_title">🔒 已加密筆記</string>
+    <string name="note_encrypted_hidden">內容已隱藏，點擊解鎖</string>
+    <string name="note_encrypted_word_count">*** 字</string>
+    <string name="note_encrypted_time">時間已隱藏</string>
+    <string name="note_encrypted_absolute_time">日期已隱藏</string>
+    <string name="note_encrypt">加密</string>
+    <string name="note_remove_encryption">取消加密</string>
+    <string name="password_encrypt_title">設定筆記密碼</string>
+    <string name="password_encrypt_body">為這篇筆記設定獨立密碼。</string>
+    <string name="password_warning">密碼一旦遺失將無法找回</string>
+    <string name="password_label">密碼</string>
+    <string name="password_placeholder">請輸入密碼</string>
+    <string name="password_confirm_label">確認密碼</string>
+    <string name="password_unlock_title">解鎖筆記</string>
+    <string name="password_unlock_body">輸入密碼以查看內容。</string>
+    <string name="password_remove_title">取消加密</string>
+    <string name="password_remove_body">輸入目前密碼以取消加密。</string>
+    <string name="password_error_mismatch">兩次密碼不一致</string>
+    <string name="password_error_empty">密碼不能為空</string>
+    <string name="password_error_wrong">密碼錯誤</string>
+    <string name="password_confirm_encrypt">確認加密</string>
+    <string name="password_unlock_action">解鎖</string>
+    <string name="password_remove_action">取消加密</string>
+    <string name="editor_attach_image">圖片</string>
+    <string name="editor_attach_file">檔案</string>
+    <string name="editor_attach_location">定位</string>
+    <string name="editor_block_placeholder">輸入正文…</string>
+    <string name="editor_image_content_desc">圖片</string>
+    <string name="editor_attachment_failed">無法新增附件</string>
+    <string name="editor_location_failed">無法取得目前位置</string>
+    <string name="editor_location_permission_denied">需要位置權限</string>
+    <string name="editor_location_open_failed">沒有可開啟地圖的應用程式</string>
+    <string name="editor_action_edit">編輯</string>
+    <string name="editor_total_words">共 %1$d 字</string></resources>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f1ff"/>
+      <stop offset=".48" stop-color="#dce8ff"/>
+      <stop offset="1" stop-color="#fff2e4"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".98"/>
+      <stop offset="1" stop-color="#f2f7ff" stop-opacity=".95"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0e1230" flood-opacity=".20"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path d="M-90 396C76 300 154 432 288 372 408 318 474 342 602 268V602H-90Z" fill="#ffffff" opacity=".14"/>
+  <path d="M-70 108C56 46 158 138 270 82 376 30 472 76 582 16V-42H-70Z" fill="#8fa8ff" opacity=".12"/>
+
+  <g transform="rotate(-7 256 256)" filter="url(#shadow)">
+    <rect x="136" y="104" width="240" height="304" rx="42" fill="url(#paper)"/>
+    <rect x="136" y="104" width="240" height="304" rx="42" fill="none" stroke="#ffffff" stroke-opacity=".76" stroke-width="5"/>
+
+    <path d="M312 104L376 168H312Z" fill="#e2eaff"/>
+    <path d="M136 296C184 260 224 324 272 294 320 264 356 294 376 278V366C376 404 346 434 308 434H204C166 434 136 404 136 366Z" fill="#8fa8ff" opacity=".18"/>
+
+    <path d="M180 232H332" stroke="#6c7cff" stroke-width="15" stroke-linecap="round"/>
+    <path d="M180 276H292" stroke="#6a9bd8" stroke-width="13" stroke-linecap="round"/>
+    <path d="M180 316H252" stroke="#b58be0" stroke-width="12" stroke-linecap="round"/>
+
+    <path d="M336 136c3.8 15.8 7.4 19.4 23.2 23.2-15.8 3.8-19.4 7.4-23.2 23.2-3.8-15.8-7.4-19.4-23.2-23.2 15.8-3.8 19.4-7.4 23.2-23.2Z" fill="#7c86ff"/>
+  </g>
+
+  <path d="M392 84c4.1 16.4 7.6 19.9 24 24-16.4 4.1-19.9 7.6-24 24-4.1-16.4-7.6-19.9-24-24 16.4-4.1 19.9-7.6 24-24Z" fill="#8e9bff"/>
+</svg>

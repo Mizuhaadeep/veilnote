@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veilnote · 雾笺 — 纯本地 Block 笔记</title>
+  <meta name="description" content="Veilnote 雾笺：纯本地、Block 混排、单篇加密的 Android 笔记应用。Made with DeepSeek." />
+  <meta name="theme-color" content="#eef2ff" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --ink: #1b1c21;
+      --muted: #626675;
+      --line: rgba(27, 28, 33, .10);
+      --card: rgba(255, 255, 255, .72);
+      --accent: #5b68d8;
+      --accent-soft: #e6e9ff;
+      --shadow: 0 24px 70px rgba(44, 54, 110, .16);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(1200px 700px at 12% -8%, #f8f1ff 0%, transparent 58%),
+        radial-gradient(1000px 700px at 92% 8%, #dce8ff 0%, transparent 55%),
+        radial-gradient(900px 700px at 52% 108%, #fff2e4 0%, transparent 55%),
+        #f7f5f1;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 26px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(60, 70, 130, .18);
+    }
+
+    .top-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .top-links a { text-decoration: none; }
+    .top-links a:hover { color: var(--ink); }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .54);
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 56px;
+      padding: 58px 0 28px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .62);
+      border: 1px solid var(--line);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #6b78e8;
+      box-shadow: 0 0 0 4px rgba(107, 120, 232, .12);
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 800;
+    }
+
+    h1 small {
+      display: block;
+      margin-top: 14px;
+      font-size: clamp(20px, 2.3vw, 30px);
+      font-weight: 500;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 620px;
+      font-size: 18px;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 650;
+      border: 1px solid transparent;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+
+    .primary {
+      color: #fff;
+      background: linear-gradient(135deg, #5b68d8, #7d86ec);
+      box-shadow: 0 14px 30px rgba(75, 87, 190, .28);
+    }
+
+    .secondary {
+      color: var(--ink);
+      background: rgba(255, 255, 255, .72);
+      border-color: var(--line);
+      box-shadow: 0 10px 24px rgba(44, 54, 110, .07);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 16px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .meta span { display: inline-flex; align-items: center; gap: 6px; }
+
+    .art {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 430px;
+    }
+
+    .ring {
+      position: absolute;
+      width: min(430px, 92%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .62);
+      background:
+        radial-gradient(circle at 35% 28%, rgba(255,255,255,.92), rgba(255,255,255,.16) 58%, transparent 70%),
+        linear-gradient(145deg, rgba(124, 134, 255, .22), rgba(168, 210, 255, .12) 48%, rgba(255, 222, 190, .20));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.8), var(--shadow);
+    }
+
+    .app-icon {
+      position: relative;
+      width: min(290px, 66%);
+      border-radius: 70px;
+      box-shadow: 0 36px 80px rgba(42, 54, 120, .28);
+    }
+
+    .float-card {
+      position: absolute;
+      right: 2%;
+      bottom: 8%;
+      width: 190px;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .68);
+      border: 1px solid rgba(255, 255, 255, .8);
+      box-shadow: 0 16px 36px rgba(44, 54, 110, .14);
+      backdrop-filter: blur(18px);
+    }
+
+    .float-card strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .float-card span { font-size: 11.5px; color: var(--muted); }
+
+    section { padding: 50px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(26px, 3vw, 36px);
+      letter-spacing: -.035em;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 460px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      padding: 23px;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, .7);
+      box-shadow: 0 14px 34px rgba(44, 54, 110, .07);
+      backdrop-filter: blur(18px);
+    }
+
+    .card .num {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: -.01em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .download {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 30px;
+      border-radius: 28px;
+      background:
+        radial-gradient(520px 240px at 8% 0%, rgba(124, 134, 255, .18), transparent 68%),
+        rgba(255, 255, 255, .72);
+      border: 1px solid rgba(255, 255, 255, .75);
+      box-shadow: var(--shadow);
+    }
+
+    .download h2 { margin-bottom: 8px; }
+    .download p { margin: 0; color: var(--muted); line-height: 1.8; font-size: 14px; }
+    .download .actions { margin-top: 18px; }
+
+    .hash {
+      margin-top: 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 10.5px;
+      color: #757b8c;
+      word-break: break-all;
+      line-height: 1.65;
+    }
+
+    .badge-box {
+      min-width: 140px;
+      text-align: center;
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .55);
+      border: 1px solid var(--line);
+    }
+
+    .badge-box strong { display: block; font-size: 26px; letter-spacing: -.04em; }
+    .badge-box span { font-size: 11px; color: var(--muted); }
+
+    .note {
+      padding: 20px 23px;
+      border-radius: 20px;
+      border: 1px solid rgba(91, 104, 216, .16);
+      background: rgba(230, 233, 255, .42);
+      color: #4b5070;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 44px 0 54px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .foot-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .foot-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .foot-links a { text-decoration: none; }
+    .foot-links a:hover { color: var(--ink); }
+
+    .deepseek {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .52);
+      border: 1px solid var(--line);
+      color: #4d568f;
+      font-weight: 650;
+    }
+
+    .deepseek .spark {
+      width: 9px;
+      height: 9px;
+      background: #5b68d8;
+      clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 22px; padding-top: 30px; }
+      .art { min-height: 350px; order: -1; }
+      .ring { width: min(330px, 82%); }
+      .app-icon { width: min(210px, 55%); border-radius: 52px; }
+      .float-card { right: 8%; bottom: 5%; width: 166px; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .download { grid-template-columns: 1fr; }
+      .badge-box { display: none; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 10px; }
+      .top-links a:not(.keep) { display: none; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      header { padding: 18px 0; }
+      .brand img { width: 38px; height: 38px; }
+      h1 { font-size: 46px; }
+      .lead { font-size: 16px; }
+      .grid { grid-template-columns: 1fr; }
+      .art { min-height: 290px; }
+      .float-card { display: none; }
+      .actions .button { width: 100%; }
+      .download { padding: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="./">
+        <img src="icon.svg" alt="Veilnote" />
+        <span>Veilnote · 雾笺</span>
+      </a>
+      <nav class="top-links" aria-label="导航">
+        <a class="keep" href="#features">功能</a>
+        <a href="#download">下载</a>
+        <a href="https://github.com/Mizuhaadeep/veilnote">GitHub</a>
+        <a class="pill" href="https://github.com/Mizuhaadeep/veilnote/releases/latest">v1.0.1</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="kicker"><span class="dot"></span> 纯本地 · 不上传 · 不追踪</div>
+          <h1>把想法<br />留在雾里。<small>VEILNOTE / 雾笺</small></h1>
+          <p class="lead">
+            一页会呼吸的本地笔记。文字、图片、文件与地点自由混排，
+            每篇笔记都可以单独上锁。没有账号，没有云同步，只有你的设备。
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/Mizuhaadeep/veilnote/releases/latest/download/Veilnote-1.0.1-release.apk">
+              ↓ 下载 Android APK
+            </a>
+            <a class="button secondary" href="https://github.com/Mizuhaadeep/veilnote">查看源码</a>
+          </div>
+          <div class="meta">
+            <span>Android 8.0+</span>
+            <span>约 13.6 MB</span>
+            <span>MIT License</span>
+            <span>Made with DeepSeek</span>
+          </div>
+        </div>
+
+        <div class="art" aria-hidden="true">
+          <div class="ring"></div>
+          <img class="app-icon" src="icon.svg" alt="" />
+          <div class="float-card">
+            <strong>🔒 已加密笔记</strong>
+            <span>内容已隐藏，点击解锁</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="section-head">
+          <h2>不是编辑器。是文档。</h2>
+          <p>用 Block 组织内容，而不是把所有东西塞进一个输入框。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="num">01</div>
+            <h3>图文、文件、定位混排</h3>
+            <p>文本、图片、文件和地点按顺序流动；插入后自动生成新的空文本块并聚焦。</p>
+          </article>
+          <article class="card">
+            <div class="num">02</div>
+            <h3>点击哪里，从哪里编辑</h3>
+            <p>阅读模式记录点击字符的精确 offset，进入编辑时光标落在原位，列表不跳到底部。</p>
+          </article>
+          <article class="card">
+            <div class="num">03</div>
+            <h3>单篇笔记独立上锁</h3>
+            <p>每篇笔记独立密码。数据库只保存 SHA-256 哈希；锁定卡片隐藏标题、正文与时间。</p>
+          </article>
+          <article class="card">
+            <div class="num">04</div>
+            <h3>纯本地存储</h3>
+            <p>Room + DataStore；可选 SAF 公共目录，自动同步 `.veil` 文件。无账号、无网络权限。</p>
+          </article>
+          <article class="card">
+            <div class="num">05</div>
+            <h3>玻璃与雾</h3>
+            <p>低透明度玻璃卡、环境渐变、弹簧动效。全量/极简模式自由切换。</p>
+          </article>
+          <article class="card">
+            <div class="num">06</div>
+            <h3>开源</h3>
+            <p>Kotlin + Jetpack Compose 编写，采用 MIT License 开源。欢迎 Issue 与 PR。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="download">
+        <div class="download">
+          <div>
+            <h2>下载 Veilnote 1.0.1</h2>
+            <p>
+              已签名 APK，安装即用。AAB 面向应用商店与 Play Console。
+              只从本项目的 GitHub Releases 下载。
+            </p>
+            <div class="actions">
+              <a class="button primary" href="https://github.com/Mizuhaadeep/veilnote/releases/latest/download/Veilnote-1.0.1-release.apk">
+                ↓ 下载 APK
+              </a>
+              <a class="button secondary" href="https://github.com/Mizuhaadeep/veilnote/releases/latest">
+                全部 Release
+              </a>
+            </div>
+            <div class="hash">
+              APK SHA-256<br />
+              F67A1A3F49BF8BB73EBDDB3BABDD178ACBA6CFE36469A60A99B91067DAEF0F05
+            </div>
+          </div>
+          <div class="badge-box">
+            <strong>1.0.1</strong>
+            <span>versionCode 2</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="note">
+          <strong>关于「加密」：</strong>
+          当前实现是访问锁：密码以 SHA-256 哈希保存，用于校验与隐藏 UI；正文仍以原文保存在本地 Room / `.veil` 中。
+          它不是 AES 静态密文加密。如果你需要真正的静态加密，请关注后续版本或参与贡献。
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-inner">
+        <div>
+          <strong>Veilnote · 雾笺</strong><br />
+          <span>本地优先的 Block 笔记。</span>
+        </div>
+        <div class="foot-links">
+          <a href="https://github.com/Mizuhaadeep/veilnote">Source</a>
+          <a href="https://github.com/Mizuhaadeep/veilnote/issues">Issues</a>
+          <a href="https://github.com/Mizuhaadeep/veilnote/blob/main/LICENSE">MIT License</a>
+        </div>
+        <span class="deepseek"><span class="spark"></span> Made with DeepSeek</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

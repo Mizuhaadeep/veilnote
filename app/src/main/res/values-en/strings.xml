@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Veilnote</string>
+    <string name="brand_name">VEILNOTE</string>
+    <string name="brand_tagline">Let every thought find its own light</string>
+    <string name="storage_choice_title">Choose how to store your data</string>
+    <string name="storage_choice_body">To keep notes after reinstalling, Veilnote can create a dedicated folder in public storage. You can skip this and use app-private storage.</string>
+    <string name="storage_choice_agree">Agree, create a folder</string>
+    <string name="storage_choice_skip">Not now, use private storage</string>
+    <string name="storage_skip_warning_title">Important</string>
+    <string name="storage_skip_warning_body">If you skip, notes are stored in app-private space. If you uninstall Veilnote, they will be permanently lost. Skip anyway?</string>
+    <string name="settings_mode_title">App mode</string>
+    <string name="settings_mode_hint">Minimal disables transitions and URL detection, leaving just writing.</string>
+    <string name="settings_mode_minimal">Minimal</string>
+    <string name="settings_mode_full">Full</string>
+    <string name="settings_mode_minimal_hint">Transition options are hidden in Minimal mode.</string>
+    <string name="settings_url_switch">URL detection</string>
+    <string name="storage_skip_confirm">Skip anyway</string>
+    <string name="storage_skip_create">Create folder</string>
+    <string name="storage_guide_title">Create a Veilnote folder</string>
+    <string name="storage_guide_body">In the system picker, tap “New folder”, name it “Veilnote”, then tap “Use this folder”.</string>
+    <string name="storage_guide_step_create">1. New folder</string>
+    <string name="storage_guide_step_name">2. Name it Veilnote</string>
+    <string name="storage_guide_step_use">3. Tap “Use this folder”</string>
+    <string name="storage_guide_confirm">Got it</string>
+    <string name="storage_saf_setup_failed">Could not create the folder. Please try again.</string>
+    <string name="storage_fallback_toast">External folder failed. Switched back to app-private storage.</string>
+    <string name="settings_data_title">Data</string>
+    <string name="storage_status_private">Current: app-private storage</string>
+    <string name="storage_status_private_warning">Notes will be permanently lost if you uninstall the app.</string>
+    <string name="storage_status_enable">Set up dedicated folder</string>
+    <string name="storage_status_saf">Current: dedicated folder</string>
+    <string name="storage_status_folder">Folder: %1$s</string>
+    <string name="storage_status_safe">Long-term read/write access granted. Notes survive reinstall.</string>
+
+    <!-- Home -->
+    <string name="home_title">My Notes</string>
+    <plurals name="home_note_count">
+        <item quantity="one">%1$d note</item>
+        <item quantity="other">%1$d notes</item>
+    </plurals>
+    <string name="home_note_count_empty">Start with your first thought</string>
+    <string name="action_new_note">New</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_hint">Search titles or content…</string>
+    <string name="search_empty_title">No notes found</string>
+    <string name="search_empty_body">Try another keyword, or clear the tag filter.</string>
+    <string name="search_clear_filters">Clear filters</string>
+    <string name="empty_title">It is quiet here</string>
+    <string name="empty_body">Write your first note and keep this moment in the light.</string>
+    <string name="empty_action">Write the first note</string>
+    <string name="loading_notes">Gathering your notes…</string>
+    <string name="tag_all">All</string>
+    <string name="tag_manage">Manage tags</string>
+    <string name="note_untitled">Untitled</string>
+    <string name="note_empty_content_hint">Tap to keep writing</string>
+    <string name="note_pin">Pin to top</string>
+    <string name="note_unpin">Unpin</string>
+    <string name="note_pin_bottom">Move to bottom</string>
+    <string name="note_unpin_bottom">Remove from bottom</string>
+    <plurals name="selection_count">
+        <item quantity="one">%1$d selected</item>
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+    <string name="action_delete_selected">Delete selected</string>
+    <string name="cd_exit_selection">Exit selection</string>
+    <string name="cd_scroll_to_top">Scroll to top</string>
+    <string name="cd_scroll_to_bottom">Scroll to bottom</string>
+    <string name="note_deleted_snackbar">Deleted “%1$s”</string>
+
+    <!-- Time -->
+    <string name="time_just_now">Just now</string>
+    <string name="time_yesterday_at">Yesterday at %1$s</string>
+    <plurals name="time_minutes_ago">
+        <item quantity="one">%1$d minute ago</item>
+        <item quantity="other">%1$d minutes ago</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">%1$d hour ago</item>
+        <item quantity="other">%1$d hours ago</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="one">%1$d day ago</item>
+        <item quantity="other">%1$d days ago</item>
+    </plurals>
+
+    <!-- Tags -->
+    <string name="tag_sheet_title">Tags</string>
+    <string name="tag_sheet_subtitle">A light place for every idea.</string>
+    <string name="tag_add_hint">New tag name</string>
+    <string name="tag_add_action">Add tag</string>
+    <string name="tag_empty_hint">No tags yet. Create the first one.</string>
+    <string name="tag_delete_title">Delete this tag?</string>
+    <string name="tag_delete_message">Deleting “%1$s” also removes it from all notes. The notes themselves stay.</string>
+    <string name="tag_duplicate_error">A tag with this name already exists</string>
+    <string name="tag_blank_error">A tag name cannot be empty</string>
+    <string name="tag_generic_error">Could not update tags. Please try again.</string>
+    <string name="tag_picker_title">Choose tags</string>
+    <string name="tag_picker_subtitle">Select as many as you like, or create one on the spot.</string>
+    <string name="tag_existing">Existing tags</string>
+    <string name="tag_none">No tags yet</string>
+    <!-- Editor -->
+    <string name="editor_title">Edit note</string>
+    <string name="editor_action_done">Done</string>
+    <string name="editor_placeholder_title">Title</string>
+    <string name="editor_save_pending">Unsaved</string>
+    <string name="editor_save_saving">Saving…</string>
+    <string name="editor_save_saved">Saved</string>
+    <plurals name="word_count">
+        <item quantity="one">%1$d char</item>
+        <item quantity="other">%1$d chars</item>
+    </plurals>
+    <string name="editor_save_failed">Save failed</string>
+    <string name="editor_load_error">This note is gone</string>
+    <string name="editor_ambience_label">Ambience</string>
+    <string name="editor_ambience_hint">Give this note a quiet layer of mood.</string>
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_subtitle">Make the space feel like yours.</string>
+    <string name="settings_background_title">Background</string>
+    <string name="settings_gradient_title">Gradient</string>
+    <string name="settings_image_title">Image</string>
+    <string name="settings_image_pick">Choose image</string>
+    <string name="settings_image_change">Change image</string>
+    <string name="settings_image_remove">Remove image</string>
+    <string name="settings_image_active">Image background active</string>
+    <string name="settings_image_use">Use this image</string>
+    <string name="settings_image_none">No image selected</string>
+    <string name="settings_image_hint">The image is copied into private app storage and stays on this device.</string>
+    <string name="settings_image_importing">Processing image…</string>
+    <string name="settings_image_failed">Could not import the image. Try another one.</string>
+    <string name="settings_blur_title">Blur strength</string>
+    <string name="settings_blur_value">%1$d dp</string>
+    <string name="settings_blur_hint">Only the background is blurred. Glass cards always stay crisp.</string>
+    <string name="settings_appearance_title">Appearance</string>
+    <string name="settings_dark_title">Dark mode</string>
+    <string name="settings_transition_title">Page transition</string>
+    <string name="settings_transition_style_title">Transition style</string>
+    <string name="settings_transition_hint">Choose how pages enter. Changes apply immediately.</string>
+    <string name="settings_transition_bottom_up">Bottom up</string>
+    <string name="settings_transition_scale">Scale from button</string>
+    <string name="url_open_failed">No browser app available</string>
+    <string name="settings_dark_system">System</string>
+    <string name="settings_dark_light">Light</string>
+    <string name="settings_dark_dark">Dark</string>
+    <string name="settings_language_title">Language</string>
+    <string name="settings_language_hint">The interface refreshes immediately after switching.</string>
+    <string name="settings_language_system">System default</string>
+    <string name="settings_reset">Reset to defaults</string>
+    <string name="settings_reset_title">Reset settings?</string>
+    <string name="settings_reset_message">Background, blur and dark mode will return to their defaults. Your notes are not affected.</string>
+    <string name="settings_local_title">Yours on this device</string>
+    <string name="settings_local_body">Notes and settings stay on this device. No sign-in and no cloud sync.</string>
+
+    <!-- Dialogs / common -->
+    <string name="action_close">Close</string>
+    <string name="action_back">Back</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_done">Done</string>
+    <string name="cd_more">More actions</string>
+    <string name="cd_clear_search">Clear search</string>
+    <string name="cd_edit_tag">Rename tag</string>
+    <string name="cd_delete_tag">Delete tag</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_background_image">Background image preview</string>
+    <string name="operation_failed">Something went wrong. Please try again.</string>
+
+    <!-- Ambience colors -->
+    <string name="ambience_mist">Mist</string>
+    <string name="ambience_sage">Sage</string>
+    <string name="ambience_ocean">Ocean</string>
+    <string name="ambience_amber">Amber</string>
+    <string name="ambience_rose">Rose</string>
+    <string name="ambience_violet">Violet</string>
+
+    <!-- Background gradients -->
+    <string name="gradient_aurora">Aurora</string>
+    <string name="gradient_sunset">Sunset</string>
+    <string name="gradient_midnight">Midnight</string>
+    <string name="gradient_sage">Tundra</string>
+    <string name="gradient_blush">Blush</string>
+    <string name="gradient_ocean">Deep Sea</string>
+    <!-- Note encryption -->
+    <string name="note_encrypted_title">🔒 Encrypted note</string>
+    <string name="note_encrypted_hidden">Content hidden, tap to unlock</string>
+    <string name="note_encrypted_word_count">*** chars</string>
+    <string name="note_encrypted_time">Time hidden</string>
+    <string name="note_encrypted_absolute_time">Date hidden</string>
+    <string name="note_encrypt">Encrypt</string>
+    <string name="note_remove_encryption">Remove encryption</string>
+    <string name="password_encrypt_title">Set note password</string>
+    <string name="password_encrypt_body">Set a separate password for this note.</string>
+    <string name="password_warning">If you lose this password it cannot be recovered</string>
+    <string name="password_label">Password</string>
+    <string name="password_placeholder">Enter password</string>
+    <string name="password_confirm_label">Confirm password</string>
+    <string name="password_unlock_title">Unlock note</string>
+    <string name="password_unlock_body">Enter the password to view this note.</string>
+    <string name="password_remove_title">Remove encryption</string>
+    <string name="password_remove_body">Enter the current password to remove encryption.</string>
+    <string name="password_error_mismatch">Passwords do not match</string>
+    <string name="password_error_empty">Password cannot be empty</string>
+    <string name="password_error_wrong">Incorrect password</string>
+    <string name="password_confirm_encrypt">Encrypt</string>
+    <string name="password_unlock_action">Unlock</string>
+    <string name="password_remove_action">Remove</string>
+    <string name="editor_attach_image">Image</string>
+    <string name="editor_attach_file">File</string>
+    <string name="editor_attach_location">Location</string>
+    <string name="editor_block_placeholder">Start writing…</string>
+    <string name="editor_image_content_desc">Image</string>
+    <string name="editor_attachment_failed">Could not add attachment</string>
+    <string name="editor_location_failed">Could not get current location</string>
+    <string name="editor_location_permission_denied">Location permission is required</string>
+    <string name="editor_location_open_failed">No map app available</string>
+    <string name="editor_action_edit">Edit</string>
+    <string name="editor_total_words">Total: %1$d</string></resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="-7">
+
+        <!-- Soft drop shadow keeps the paper readable on the pale backdrop. -->
+        <path
+            android:fillColor="#260E1230"
+            android:pathData="M42,25
+                H66
+                C73.7,25 80,31.3 80,39
+                V73
+                C80,80.7 73.7,87 66,87
+                H42
+                C34.3,87 28,80.7 28,73
+                V39
+                C28,31.3 34.3,25 42,25 Z" />
+
+        <!-- Glass-paper card. -->
+        <path
+            android:pathData="M42,22
+                H66
+                C73.7,22 80,28.3 80,36
+                V70
+                C80,77.7 73.7,84 66,84
+                H42
+                C34.3,84 28,77.7 28,70
+                V36
+                C28,28.3 34.3,22 42,22 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:endX="80"
+                    android:endY="84"
+                    android:startX="28"
+                    android:startY="22"
+                    android:type="linear">
+                    <item
+                        android:color="#FAFFFFFF"
+                        android:offset="0.0" />
+                    <item
+                        android:color="#F2F2F7FF"
+                        android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M42,22
+                H66
+                C73.7,22 80,28.3 80,36
+                V70
+                C80,77.7 73.7,84 66,84
+                H42
+                C34.3,84 28,77.7 28,70
+                V36
+                C28,28.3 34.3,22 42,22 Z"
+            android:strokeColor="#BFFFFFFF"
+            android:strokeWidth="1.1" />
+
+        <!-- Folded corner. -->
+        <path
+            android:fillColor="#FFE2EAFF"
+            android:pathData="M67,22
+                L80,35
+                L67,35 Z" />
+
+        <!-- A translucent veil of mist across the lower half. -->
+        <path
+            android:fillColor="#2E8FA8FF"
+            android:pathData="M28,64
+                C38,58 46,70 56,64
+                C66,58 74,64 80,61
+                L80,70
+                C80,77.7 73.7,84 66,84
+                H42
+                C34.3,84 28,77.7 28,70 Z" />
+
+        <!-- Three text strokes: lavender, blue and lilac. -->
+        <path
+            android:pathData="M38,51 H70"
+            android:strokeColor="#FF6C7CFF"
+            android:strokeLineCap="round"
+            android:strokeWidth="3.2" />
+        <path
+            android:pathData="M38,60 H61"
+            android:strokeColor="#FF6A9BD8"
+            android:strokeLineCap="round"
+            android:strokeWidth="2.8" />
+        <path
+            android:pathData="M38,69 H53"
+            android:strokeColor="#FFB58BE0"
+            android:strokeLineCap="round"
+            android:strokeWidth="2.6" />
+
+        <!-- Tiny four-point sparkle on the card. -->
+        <path
+            android:fillColor="#FF7C86FF"
+            android:pathData="M71,28
+                C71.8,32 72.6,32.8 76.5,33.6
+                C72.6,34.4 71.8,35.2 71,39.2
+                C70.2,35.2 69.4,34.4 65.5,33.6
+                C69.4,32.8 70.2,32 71,28 Z" />
+    </group>
+
+    <!-- Floating sparkle outside the card, inside the adaptive safe zone. -->
+    <path
+        android:fillColor="#FF8E9BFF"
+        android:pathData="M82,18
+            C82.7,21.7 83.5,22.5 87.2,23.2
+            C83.5,23.9 82.7,24.7 82,28.4
+            C81.3,24.7 80.5,23.9 76.8,23.2
+            C80.5,22.5 81.3,21.7 82,18 Z" />
+</vector>

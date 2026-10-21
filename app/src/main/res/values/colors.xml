@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="glass_note_window_background">#FFF4F1EC</color>
+    <color name="glass_note_window_background_dark">#FF0E1117</color>
+    <color name="glass_note_accent">#FF6C7CFF</color>
+</resources>
